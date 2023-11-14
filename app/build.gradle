@@ -49,8 +49,18 @@ dependencies {
     // constrain layout
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // material
-//    implementation("com.google.android.material:material:1.9.0")
+    // glide
+    implementation("com.github.bumptech.glide:glide:4.15.0")
+
+    // navigation for kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+
+    // lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+
+
+
+
 
 
 }
