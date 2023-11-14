@@ -6,6 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/gray_cccccc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:letterSpacing="0.15"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/toolbarName"
+            tools:text="@string/toolbarName"
+            tools:visibility="visible" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/back"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:src="@drawable/arrow_back"-->
+<!--            android:background="@color/transparent"-->
+<!--            android:layout_marginStart="25dp"-->
+<!--            android:visibility="@{viewModel.currentFragmentType == CurrentFragmentType.VOCABULARY_DETAIL || viewModel.currentFragmentType == CurrentFragmentType.WORD_TEST || viewModel.currentFragmentType == CurrentFragmentType.PROFILE_COLLECTED || viewModel.currentFragmentType == CurrentFragmentType.WATCH_HISTORY || viewModel.currentFragmentType == CurrentFragmentType.WORDS_COLLECTION ? View.VISIBLE : View.GONE}"/>-->
+
+
+    </androidx.appcompat.widget.Toolbar>
+
 
     <TextView
         android:layout_width="wrap_content"

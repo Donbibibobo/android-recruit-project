@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 34
 
     defaultConfig {
         applicationId "in.hahow.android_recruit_project"
@@ -48,5 +48,9 @@ dependencies {
 
     // constrain layout
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    // material
+//    implementation("com.google.android.material:material:1.9.0")
+
 
 }
