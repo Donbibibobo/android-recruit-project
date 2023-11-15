@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name">android-recruit-project</string>
 
-
+    <!-- ActivityInfo -->
     <string name="toolbarName">首頁</string>
+
+    <!-- classInfo -->
+    <string name="classInfoTitle">學習 AI 一把抓：點亮人工智慧技能樹</string>
+    <string name="statusIncubating">募資中</string>
+    <string name="statusPublished">已開課</string>
+    <string name="reachSuccessCriteria">%d%%</string>
+    <string name="unReachSuccessCriteria">%d / %d 人</string>
+
+    <!-- tools -->
+    <string name="unReachSuccessCriteriaTools">6 / 30 人</string>
+    <string name="ReachSuccessCriteriaTools">250%</string>
+
 
 
 </resources>

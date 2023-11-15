@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import hahow.recruit.hahowdondon.databinding.FragmentHomeBinding
 
-class HomeFragment: Fragment() {
+class HomeFragment : Fragment() {
 
     private lateinit var viewModel: HomeViewModel
 
@@ -17,18 +17,23 @@ class HomeFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         binding.viewModel = viewModel
 
-        viewModel.status.observe(viewLifecycleOwner){
-            Log.i("HomeFragment", "$it")
+        viewModel.status.observe(viewLifecycleOwner) {
+            Log.i("HomeFragment", it)
         }
 
 
-            return binding.root
+        binding.homeRecyclerView.adapter = HomeListAdapter()
+
+
+
+
+        return binding.root
     }
 }
