@@ -20,15 +20,13 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/itemClassImageCardView"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="14dp"
             android:backgroundTint="@color/gray_646464"
             app:cardCornerRadius="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -44,102 +42,115 @@
                     app:imageUrl="@{classInfo.coverImageUrl}" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/itemClassStatus"
+                    android:id="@+id/itemClassDueTime"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:clickable="false"
+                    android:focusable="false"
                     android:insetTop="0dp"
                     android:insetBottom="0dp"
-                    android:text="@{classInfo.status}"
+                    android:text="@string/proposalDueTime"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
-                    app:backgroundTint="@color/gray_f0f0f0"
-                    app:cornerRadius="6dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="12sp"
+                    app:icon="@drawable/svg_timeicon"
+                    app:iconPadding="10dp"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
-                    tools:text="@string/statusIncubating" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:text="@string/proposalDueTimeTools" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/itemClassStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@{classInfo.status}"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:backgroundTint="@color/gray_f0f0f0"
+            app:cornerRadius="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemClassImageCardView"
+            tools:text="@string/statusIncubating" />
+
+
         <TextView
             android:id="@+id/itemClassTitle"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="14dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="14dp"
             android:ellipsize="end"
             android:fontFamily="@font/noto_sans"
             android:letterSpacing="0.1"
             android:maxLines="2"
             android:text="@{classInfo.title}"
-            android:textColor="@color/gray_646464"
-            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/itemClassImageCardView"
-            app:layout_constraintTop_toTopOf="@+id/itemClassImageCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemClassStatus"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:text="@string/classInfoTitle" />
+
 
         <TextView
             android:id="@+id/itemClassReachSuccessCriteria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
             android:fontFamily="@font/noto_sans"
             android:letterSpacing="0.1"
             android:text="@{@string/reachSuccessCriteria(250)}"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:visibility="gone"
-            app:layout_constraintStart_toEndOf="@+id/itemClassImageCardView"
-            app:layout_constraintTop_toBottomOf="@+id/itemClassTitle"
+            app:layout_constraintTop_toTopOf="@+id/itemClassStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/itemClassStatus"
             tools:text="@string/ReachSuccessCriteriaTools" />
 
         <TextView
             android:id="@+id/itemClassUnReachSuccessCriteria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
             android:fontFamily="@font/noto_sans"
             android:letterSpacing="0.1"
             android:text="@{@string/unReachSuccessCriteria(6,30)}"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/itemClassImageCardView"
-            app:layout_constraintTop_toBottomOf="@+id/itemClassTitle"
+            app:layout_constraintTop_toTopOf="@+id/itemClassStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/itemClassStatus"
             tools:text="@string/unReachSuccessCriteriaTools" />
 
         <ProgressBar
             android:id="@+id/itemClassProgressBar"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="100dp"
-            android:layout_height="30sp"
-            android:layout_marginStart="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:max="100"
             android:progress="50"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/itemClassImageCardView" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/itemClassDueTime"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:text="@string/proposalDueTime"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            app:icon="@drawable/svg_timeicon"
-            app:iconPadding="10dp"
-            app:iconSize="18dp"
-            app:iconTint="@color/black"
-            android:clickable="false"
-            android:focusable="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="@string/proposalDueTimeTools" />
+            app:layout_constraintTop_toTopOf="@+id/itemClassStatus"
+            app:layout_constraintStart_toEndOf="@+id/itemClassStatus"
+            app:layout_constraintEnd_toStartOf="@+id/itemClassUnReachSuccessCriteria"
+            app:layout_constraintBottom_toBottomOf="@+id/itemClassStatus"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
