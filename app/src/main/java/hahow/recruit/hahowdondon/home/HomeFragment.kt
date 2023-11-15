@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import hahow.recruit.hahowdondon.databinding.FragmentHomeBinding
+import hahow.recruit.hahowdondon.ext.getVmFactory
 
 class HomeFragment : Fragment() {
 
-    private lateinit var viewModel: HomeViewModel
+    private val viewModel by viewModels<HomeViewModel> { getVmFactory() }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,17 +23,15 @@ class HomeFragment : Fragment() {
 
         val binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
-        viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         binding.viewModel = viewModel
 
-        viewModel.status.observe(viewLifecycleOwner) {
-            Log.i("HomeFragment", it)
+
+        val homeListAdapter = HomeListAdapter()
+        binding.homeRecyclerView.adapter = homeListAdapter
+
+        viewModel.classListInfo.observe(viewLifecycleOwner) {
+            homeListAdapter.submitList(it.data)
         }
-
-
-        binding.homeRecyclerView.adapter = HomeListAdapter()
-
-
 
 
         return binding.root

@@ -32,7 +32,7 @@ class HomeListAdapter: ListAdapter<ClassInfo, RecyclerView.ViewHolder>(ClassDiff
 class ClassViewHolder(private val binding: ItemClassBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(classInfo: ClassInfo) {
-
+        binding.classInfo = classInfo
     }
 }
 

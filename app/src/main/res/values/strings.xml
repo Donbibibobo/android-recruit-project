@@ -10,10 +10,13 @@
     <string name="statusPublished">已開課</string>
     <string name="reachSuccessCriteria">%d%%</string>
     <string name="unReachSuccessCriteria">%d / %d 人</string>
+    <string name="proposalDueTime">倒數 %d 天</string>
 
     <!-- tools -->
     <string name="unReachSuccessCriteriaTools">6 / 30 人</string>
     <string name="ReachSuccessCriteriaTools">250%</string>
+    <string name="proposalDueTimeTools">倒數 20 天</string>
+
 
 
 
