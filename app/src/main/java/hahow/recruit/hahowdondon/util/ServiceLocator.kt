@@ -23,7 +23,7 @@ object ServiceLocator {
 
     private fun createHaHowRepository(context: Context): HaHowRepository {
         return DefaultHaHowRepository(
-            HaHowRemoteDataSource,
+            createRemoteDataSource(),
             createLocalDataSource(context)
         )
     }
@@ -31,5 +31,9 @@ object ServiceLocator {
     // can use context to create Room here if needed
     private fun createLocalDataSource(context: Context): HaHowDataSource {
         return HaHowLocalDataSource()
+    }
+
+    private fun createRemoteDataSource(): HaHowDataSource {
+        return HaHowRemoteDataSource()
     }
 }

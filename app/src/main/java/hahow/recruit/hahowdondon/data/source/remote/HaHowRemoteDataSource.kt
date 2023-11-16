@@ -6,7 +6,7 @@ import hahow.recruit.hahowdondon.data.dataJson
 import hahow.recruit.hahowdondon.data.source.HaHowDataSource
 import hahow.recruit.hahowdondon.network.moshi
 
-object HaHowRemoteDataSource: HaHowDataSource {
+class HaHowRemoteDataSource: HaHowDataSource {
 
     // pretend to call api and fetch data.json
     override fun fetchClassListInfo(): ClassListInfo? {

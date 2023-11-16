@@ -2,7 +2,7 @@ package hahow.recruit.hahowdondon.data.source
 
 import hahow.recruit.hahowdondon.data.ClassListInfo
 
-interface HaHowRepository {
+interface HaHowRepository {   // Data Loader
 
     fun fetchClassListInfo(): ClassListInfo?
 }
