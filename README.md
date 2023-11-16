@@ -1,25 +1,28 @@
 
+## 需求
 請使用 Kotlin 實作一個 app 首頁課程列表畫面，並寫文件或註解來解釋你的設計考量。除了指定需求外，你可以自由設計 model 和 UI 來提供更好的體驗。
 
-## 技術規定
-- Deployment Target 為 Android 12。
-- 可使用第三方 library。
-- 請寫文件或註解來解釋你的設計考量。
+<h2>數據層設計：</h2>
+<p>採用官方推薦的 MVVM 架構和 Repository 模式，我設計了 <code>HaHowRepository</code> 作為數據加載的 Model 抽象層，也就是要求的「Data Loader」。這種設計提高了代碼的可維護性和可測試性，同時允許靈活地處理不同數據源。請參考下圖了解架構細節：
+<table>
+  <tr>
+    <td>
+      <img width="955" alt="截圖 2023-11-16 下午5 10 16" src="https://github.com/Donbibibobo/android-recruit-project/assets/133195279/43efee11-ef7f-4023-9c11-60fe79d32f05">
+      <p>簡略架構圖</p>
+    </td>
+    <td>
+      <img width="705" alt="截圖 2023-11-16 下午5 42 21" src="https://github.com/Donbibibobo/android-recruit-project/assets/133195279/82ee6ad7-adc1-41a7-8363-926022671c20">
+      <p>MVVM + Repository</p>
+    </td>
+  </tr>
+</table>
 
-## 需求
-請實作一個在 app 首頁看到的課程列表，需求如下：
+<h2>UI 設計：</h2>
+<p>在 UI 設計上，我深入研究了「嘖嘖」、「flyingV」和「挖貝」...等平台的視覺元素，特別是它們對大塊版式的運用。於是我決定採用類似的樣板來提升用戶體驗。查看資料整理：
+<a href="[Figma 設計連結]">Figma 設計連結</a>。</p>
 
-#### 資料
-- 請設計一個的 Data Loader 的抽象層來提供課程資料。
-- 請用專案中提供的 json file 實作上述 Data Loader 的一個實例。
+<p>另外，我特別把「status」拉出來作為一個獨立標籤，並將「倒數 n 天」直接放置於圖片上方。這種設計策略的目的是吸引用戶注意力，特別是對於那些「正在進行募資」的課程，從而增加用戶的參與度。</p>
 
-#### UI 設計
-- 依照課程當前狀態，顯示不同的標籤
-- 課程標題至多兩行
-- 本題目不用在意卡片尺寸、顏色、間距等細節，請將重點放在如何排版。（你仍然可以盡量符合示意圖）
-<img width="300" alt="CleanShot 2021-12-09 at 10 59 30@2x" src="https://user-images.githubusercontent.com/76472179/145350022-b4624fe0-2612-4fdb-950c-da6898ca4166.png">
+<h2>色調選擇：</h2>
+<p>色調上，我選擇使用 HaHow 的品牌色調「綠色」以及「橘黃」和「淡藍色」。這些色調上屬於互補，能夠賦予畫面一種溫馨而活力的氛圍，還增強了用戶界面的吸引力和閱讀體驗。</p>
 
-## 提交
-
-- 請下載或 fork Hahow Android Engineer 面試題目初始專案。
-- 請將成果上傳至 GitHub 並直接提供 repo 連結。
