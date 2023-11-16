@@ -19,7 +19,7 @@
 
 <h2>UI 設計：</h2>
 <p>在 UI 設計上，我深入研究了「嘖嘖」、「flyingV」和「挖貝」...等平台的視覺元素，特別是它們對大塊版式的運用。於是我決定採用類似的樣板來提升用戶體驗。查看資料整理：
-<a href="[Figma 設計連結]">Figma 設計連結</a>。</p>
+<a href="https://www.figma.com/file/bELOhcl9M4KmXJ0r5zNxgb/HaHow-recurit?type=design&node-id=0%3A1&mode=design&t=3mvO5LMmzUPRsa9I-1">Figma 設計連結</a>。</p>
 
 <p>另外，我特別把「status」拉出來作為一個獨立標籤，並將「倒數 n 天」直接放置於圖片上方。這種設計策略的目的是吸引用戶注意力，特別是對於那些「正在進行募資」的課程，從而增加用戶的參與度。</p>
 
