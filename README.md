@@ -33,7 +33,7 @@
       <p>另外，我特別把「status」拉出來作為一個獨立標籤，並將「倒數 n 天」直接放置於圖片上方。這種設計策略的目的是吸引用戶注意力，特別是對於那些「正在進行募資」的課程，從而增加用戶的參與度。</p>
     </td>
     <td>
-      <img width="327" alt="截圖 2023-11-16 下午6 54 22" src="https://github.com/Donbibibobo/android-recruit-project/assets/133195279/303508f8-3e59-4db3-9c4c-0af0c8a07775">
+      <img width="250" alt="截圖 2023-11-16 下午6 54 22" src="https://github.com/Donbibibobo/android-recruit-project/assets/133195279/5f411e11-970b-4736-a09a-ead1a54b3ca3">
     </td>
   </tr>
 </table>
