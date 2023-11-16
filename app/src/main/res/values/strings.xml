@@ -2,22 +2,22 @@
     <string name="app_name">android-recruit-project</string>
 
     <!-- ActivityInfo -->
-    <string name="toolbarName">首頁</string>
+    <string name="toolbarName">HaHow</string>
 
     <!-- classInfo -->
     <string name="classInfoTitle">學習 AI 一把抓：點亮人工智慧技能樹</string>
     <string name="statusIncubating">募資中</string>
     <string name="statusPublished">已開課</string>
-    <string name="reachSuccessCriteria">%d%%</string>
-    <string name="unReachSuccessCriteria">%d / %d 人</string>
-    <string name="proposalDueTime">倒數 %d 天</string>
+    <string name="statusSuccess">募資成功</string>
+    <string name="statusUnKnow">處理中</string>
+    <string name="reachSuccessCriteria">%d %%</string>
+    <string name="unReachSuccessCriteria">%d/%d 人</string>
+    <string name="proposalDueTime">倒數 %s 天</string>
+    <string name="confirm">確認</string>
 
     <!-- tools -->
     <string name="unReachSuccessCriteriaTools">6 / 30 人</string>
     <string name="ReachSuccessCriteriaTools">250%</string>
     <string name="proposalDueTimeTools">倒數 20 天</string>
-
-
-
 
 </resources>

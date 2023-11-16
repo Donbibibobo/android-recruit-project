@@ -8,8 +8,6 @@ class DefaultHaHowRepository(
 ): HaHowRepository {
 
     override fun fetchClassListInfo(): ClassListInfo? {
-        return haHowLocalDataSource.fetchClassListInfo()
+        return haHowRemoteDataSource.fetchClassListInfo()
     }
-
-
 }

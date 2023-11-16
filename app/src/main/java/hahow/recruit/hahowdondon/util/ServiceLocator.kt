@@ -30,6 +30,6 @@ object ServiceLocator {
 
     // can use context to create Room here if needed
     private fun createLocalDataSource(context: Context): HaHowDataSource {
-        return HaHowLocalDataSource()      // Database
+        return HaHowLocalDataSource()
     }
 }

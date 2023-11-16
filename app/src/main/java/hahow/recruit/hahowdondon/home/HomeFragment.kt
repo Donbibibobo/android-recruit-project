@@ -25,14 +25,20 @@ class HomeFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
 
-
-        val homeListAdapter = HomeListAdapter()
+        val homeListAdapter = HomeListAdapter(requireContext()){
+            viewModel.showAbout(requireContext(), it)
+        }
         binding.homeRecyclerView.adapter = homeListAdapter
 
         viewModel.classListInfo.observe(viewLifecycleOwner) {
             homeListAdapter.submitList(it.data)
         }
 
+        viewModel.leaveDialog.observe(viewLifecycleOwner){
+            it?.let {
+                viewModel.leaveDialogComplete()
+            }
+        }
 
         return binding.root
     }

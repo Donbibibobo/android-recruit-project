@@ -15,7 +15,7 @@
     </style>
 
     <style name="Theme.hahow.recruit.hahowdondon" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/gray_646464</item>
+        <item name="android:statusBarColor">@color/new_primary</item>
     </style>
 
 </resources>
