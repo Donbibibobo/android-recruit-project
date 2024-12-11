@@ -16,7 +16,7 @@ jobs:
         run: echo "You entered:${{ inputs.input_string }}"
 
       - name: Convert to Uppercase and Output
-      
+        id: convert
         run: |
           INPUT="${{ inputs.input_string }}"
           OUTPUT=$(echo $INPUT | tr '[:lower:]' '[:upper:]')
@@ -24,6 +24,6 @@ jobs:
           echo "result=$OUTPUT" >> $GITHUB_OUTPUT
           
       - name: Check Result
-        run: echo "The final result is:${{ steps.test_job1.outputs.result }}"
+        run: echo "The final result is:${{ steps.convert.outputs.result }}"
 
         
