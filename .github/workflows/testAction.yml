@@ -26,4 +26,35 @@ jobs:
       - name: Check Result
         run: echo "The final result is:${{ steps.convert.outputs.result }}"
 
+
+
+
+
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: "Create stg branch"
+        id: new-branch
+        run: |
+          git checkout -b "staging_test_branch"
+
+      - name: "Build Changelog"
+        id: changelog_builder
+        uses: mikepenz/release-changelog-builder-action@v3.7.2
+        with:
+          fromTag: a492a9d8af66dfb00dcaf08161b7aac22b5fd1d5
+          toTag: efccd32424eae85aeea45411a8159995b9d8aefc
+          outputFile: "changelog.txt"
+
+      - name: Commit files
+        run: |
+          if [ ! -z "$(git status --untracked-files=no --porcelain)" ]; then 
+            git config user.email ${{ secrets.ACTION_BOT_EMAIL }}
+            git config user.name ${{ secrets.ACTION_BOT_NAME }}
+            git add .
+            git commit -m "Update changelog"            
+          fi
+
         
